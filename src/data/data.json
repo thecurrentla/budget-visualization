@@ -149,7 +149,7 @@
     },
     {
       "name": "Public Works",
-      "description": "",
+      "description": "Includes blah, blah and blah",
       "budget": 71227659,
       "category": "Infrastructure",
       "subcategory": ""
@@ -239,7 +239,7 @@
       "subcategory": "Courts"
     },
     {
-      "name": "Police Department",
+      "name": "Lafayette Police Department",
       "description": "",
       "budget": 48269895,
       "category": "Public Safety",
@@ -274,5 +274,7 @@
       "subcategory": ""
     }
   ],
-  "descriptions": {}
+  "descriptions": {
+    "Infrastructure": "What a description might look like"
+  }
 }

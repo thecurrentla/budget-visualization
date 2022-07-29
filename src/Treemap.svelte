@@ -22,7 +22,7 @@
   $: y = scaleLinear().domain([0, $height]).range([0, $height]);
 
   $: treeMapFn = treemap()
-    .tile(treemapSquarify)
+    .tile(treemapBinary)
     // .padding(1)
     // .paddingInner(5)
     // .paddingOuter(5)
@@ -54,6 +54,25 @@
   //     .sum((d) => d.budget)
   //     .sort((a, b) => b.value - a.value)
   // ).descendants();
+
+  function getColor(category) {
+    switch (category) {
+      case "Utilities":
+        return "blue";
+      case "Government":
+        return "purple";
+      case "Infrastructure":
+        return "yellow";
+      case "Public Safety":
+        return "red";
+      case "Community":
+        return "green";
+      default:
+        console.log(`No color found for ${category}.`);
+    }
+
+    return "gray";
+  }
 
   function getCategory(d, depth) {
     while (d.depth > depth) d = d.parent;
@@ -92,13 +111,12 @@
   {#each nodes as d, i (`${d.data[0]}-${d.depth}-${d.value}`)}
     {#if d.value > 0}
       <g
-        class={`node depth-${d.depth}`}
+        class={`node depth-${d.depth} has-theme-${getColor(getCategory(d, 1))}`}
         class:root={isEqual(d, root)}
         class:active={some(nodes, d)}
         class:hasChildren={hasChildren(d)}
         class:isSmall={d.value / root.value < 0.035}
-        data-category={getCategory(d, 1)}
-        style={`--highlight-color: ${isEqual(d, root) ? "#fff" : color[getCategory(d, 1)]}`}
+        class:isExtraSmall={d.value / root.value < 0.007}
         transform={isEqual(d, root) ? `translate(0,${-breadcrumbHeight})` : `translate(${x(d.x0)},${y(d.y0)})`}
         on:mousemove={(e) => {
           if (!isEqual(d, root)) {
@@ -115,56 +133,66 @@
         on:click={(event) => {
           if (isEqual(d, root)) {
             zoomout(root);
-          } else if (hasChildren(d)) {
+          } else {
             zoomin(d);
           }
         }}
       >
         <rect
-          id={`rect-${i}`}
+          id={`rect-${i}-bg`}
           width={x(d.x1) - x(d.x0)}
           height={isEqual(d, root) ? $height + breadcrumbHeight : y(d.y1) - y(d.y0)}
-          fill={isEqual(d, root) ? "#fff" : color[getCategory(d, 1)]}
+          class="color"
           opacity={d.depth == 1 || root.children.length == 1 ? 1 : opacityScale(d.value)}
         />
-        {#if d.depth <= 3 || d.depth == 1}
+        {#if d.depth <= 5 || d.depth == 1}
           <foreignObject
             x={0}
             y={0}
             width={x(d.x1) - x(d.x0)}
             height={isEqual(d, root) ? breadcrumbHeight : y(d.y1) - y(d.y0)}
           >
-            <div class="label">
-              <div class="arrow back" class:visible={isEqual(d, root) && d.depth != 0}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    fill-rule="evenodd"
-                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-5.904 2.803a.5.5 0 1 0 .707-.707L6.707 6h2.768a.5.5 0 1 0 0-1H5.5a.5.5 0 0 0-.5.5v3.975a.5.5 0 0 0 1 0V6.707l4.096 4.096z"
-                  />
-                </svg>
-              </div>
-              <!-- <div class="name">{isEqual(d, root) ? "" : d.data[0]}</div> -->
+            <header class="label">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                class="arrow back"
+                class:visible={isEqual(d, root) && d.depth != 0}
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-5.904 2.803a.5.5 0 1 0 .707-.707L6.707 6h2.768a.5.5 0 1 0 0-1H5.5a.5.5 0 0 0-.5.5v3.975a.5.5 0 0 0 1 0V6.707l4.096 4.096z"
+                />
+              </svg>
               <div class="info">
-                <div class="name">{d.parent ? d.data[0] : "Total Budget"}</div>
-                <div class="value">{formatDollars(d.value)}</div>
+                {#if d.parent}
+                  <div class="value">{formatDollars(d.value)}</div>
+                  <div class="name">{d.data[0] ? d.data[0] : ""}</div>
+                {:else}
+                  <div class="value">{formatDollars(d.value)}</div>
+                  <div class="name">Total Budget</div>
+                {/if}
               </div>
               {#if hasChildren(d)}
-                <div class="arrow expand" class:visible={!isEqual(d, root)}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"
-                    />
-                  </svg>
-                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  class="arrow expand"
+                  class:visible={!isEqual(d, root)}
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"
+                  />
+                </svg>
               {/if}
-            </div>
+            </header>
           </foreignObject>
         {:else if d.depth > 5}
           <!-- else if content here -->
@@ -185,11 +213,12 @@
 </g>
 
 <style>
-  foreignObject {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial,
-      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    pointer-events: none;
-    padding: 0.5rem;
+  button {
+    appearance: none;
+    background: none;
+    border: none;
+
+    cursor: pointer;
   }
 
   .node {
@@ -201,6 +230,7 @@
     pointer-events: all;
     opacity: 1;
     transition: all 1s;
+    cursor: pointer;
   }
 
   .node.active.depth-6,
@@ -211,32 +241,35 @@
   .node.active rect {
     transition: all 1s;
   }
+  .node.root rect.color {
+    fill: var(--theme-color-lightest);
+  }
 
   .node.active rect:hover {
   }
 
   .node.hasChildren {
-    cursor: pointer;
   }
 
-  rect {
+  rect.color {
+    fill: var(--theme-color-base);
   }
+
   .rect-stroke {
     fill: none;
     stroke: #333;
     stroke-width: 2;
   }
 
-  /* .node.active {
-    pointer-events: all;
-    cursor: pointer;
-  } */
-
   .label {
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
+    padding: min(0.5rem, 0.5em) min(0.75rem, 0.75em);
+
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial,
+      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .arrow:not(.visible) {
@@ -257,30 +290,25 @@
     flex-flow: row wrap;
     align-items: baseline;
 
-    gap: 0.5em;
-  }
-  .node.root .info {
-    display: block;
+    gap: 0.125em 0.5em;
+    font-size: 1.125em;
   }
 
   .name {
-    font-size: 1em;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .value {
-    font-size: 1.15em;
-    font-weight: 800;
+    font-weight: 900;
   }
 
   .node.root {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
   .node.isSmall {
-    font-size: 0.9em;
+    font-size: 0.875em;
   }
-
-  *:focus {
-    outline: none;
+  .node.isExtraSmall {
+    font-size: 0.7em;
   }
 </style>

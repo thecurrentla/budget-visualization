@@ -10,7 +10,6 @@
   let tooltipWidth, tooltipHeight;
 
   $: if (hovered) {
-    // console.log(hovered.data);
     // console.log(breadcrumbHeight);
     // console.log(hovered.data);
     // console.log(formatDollars(hovered.data.value));
@@ -52,6 +51,10 @@
     {/if}
     {#if descriptions[hovered.data.data[0]]}
       <div class="description">{descriptions[hovered.data.data[0]]}</div>
+    {:else if hovered.data.data[1] && hovered.data.data[1][0] && hovered.data.data[1][0].description}
+      <div class="description">{hovered.data.data[1][0].description}</div>
+    {:else}
+      <div class="description" />
     {/if}
 
     <div class="value">{formatDollars(hovered.data.value)}</div>
@@ -74,23 +77,23 @@
     visibility: visible;
   }
   .breadcrumb {
-    font-size: 10px;
+    font-size: 0.75em;
     color: #666;
-    margin-bottom: 5px;
+    margin-bottom: 0.25em;
   }
   .cat {
-    font-size: 14px;
+    font-size: 0.9em;
     font-weight: 600;
-    margin-bottom: 3px;
+    margin-bottom: 0.125em;
   }
 
   .description {
-    font-size: 12px;
+    font-size: 1em;
     color: #666;
   }
 
   .value {
-    font-size: 30px;
+    font-size: 2em;
     font-weight: 600;
   }
 </style>
