@@ -4,7 +4,7 @@
   import { tweened } from "svelte/motion";
 
   const { width, height } = getContext("LayerCake");
-  export let root, x, y, d, i, formatDollars, rootHeight;
+  export let root, x, y, d, i, formatDollars, breadcrumbHeight;
   //   $: console.log($width);
 
   //   console.log(root);
@@ -19,7 +19,7 @@
   //       y0: y(d.y0),
   //       y1: y(d.y1),
   //       width: d === root ? $width : x(d.x1) - x(d.x0),
-  //       height: d === root ? rootHeight : y(d.y1) - y(d.y0),
+  //       height: d === root ? breadcrumbHeight : y(d.y1) - y(d.y0),
   //     },
   //     {
   //       duration: 750,
@@ -32,7 +32,7 @@
   //     y0: y(d.y0),
   //     y1: y(d.y1),
   //     width: d === root ? $width : x(d.x1) - x(d.x0),
-  //     height: d === root ? rootHeight : y(d.y1) - y(d.y0),
+  //     height: d === root ? breadcrumbHeight : y(d.y1) - y(d.y0),
   //   });
 
   function zoomin(d) {
@@ -86,16 +86,10 @@
 <g
   class={`node`}
   transition:fade
-  transform={d === root
-    ? `translate(0,${-rootHeight})`
-    : `translate(${x(d.x0)},${y(d.y0)})`}
+  transform={d === root ? `translate(0,${-breadcrumbHeight})` : `translate(${x(d.x0)},${y(d.y0)})`}
   on:click={(event) => (d === root ? zoomout(root) : zoomin(d))}
 >
-  <rect
-    id={`rect-${i}`}
-    width={x(d.x1) - x(d.x0)}
-    height={d === root ? rootHeight : y(d.y1) - y(d.y0)}
-  />
+  <rect id={`rect-${i}`} width={x(d.x1) - x(d.x0)} height={d === root ? breadcrumbHeight : y(d.y1) - y(d.y0)} />
   <clipPath id={`node-${i}`}>
     <use xlink:href={`#rect-${i}`} />
   </clipPath>

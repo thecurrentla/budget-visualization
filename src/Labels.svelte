@@ -1,6 +1,6 @@
 <script>
   import { isEqual } from "lodash";
-  export let nodes, root, rootHeight, formatDollars, x, y;
+  export let nodes, root, breadcrumbHeight, formatDollars, x, y;
 
   //   function getCategory(d, depth) {
   //     while (d.depth > depth) d = d.parent;
@@ -16,7 +16,7 @@
           class="label"
           class:root={isEqual(d, root)}
           style={`left: ${isEqual(d, root) ? 0 : x(d.x0)}px; top: ${
-            isEqual(d, root) ? -rootHeight : y(d.y0)
+            isEqual(d, root) ? -breadcrumbHeight : y(d.y0)
           }px; max-width: ${x(d.x1) - x(d.x0)}px`}
         >
           <div class="cat">{isEqual(d, root) ? "Budget" : d.data[0]}</div>

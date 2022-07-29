@@ -11,7 +11,7 @@
 
   $: if (hovered) {
     // console.log(hovered.data);
-    // console.log(rootHeight);
+    // console.log(breadcrumbHeight);
     // console.log(hovered.data);
     // console.log(formatDollars(hovered.data.value));
   }

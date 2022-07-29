@@ -1,0 +1,275 @@
+[
+	{
+		"Name": "PARC",
+		"Description": "",
+		"Amount": 17481157,
+		"Category": "Community",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Community Development",
+		"Description": "",
+		"Amount": 16440195,
+		"Category": "Community",
+		"Subcategory": ""
+	},
+	{
+		"Name": "LA Coop Ext. Service",
+		"Description": "",
+		"Amount": 140694,
+		"Category": "Community",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Library",
+		"Description": "",
+		"Amount": 11518784,
+		"Category": "Community",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Council Office Admin",
+		"Description": "",
+		"Amount": 6780932,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "City Council Office",
+		"Description": "",
+		"Amount": 248603,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Parish Council Office",
+		"Description": "",
+		"Amount": 246067,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Registrar Of Voters",
+		"Description": "",
+		"Amount": 379302,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Mayor-President's Office",
+		"Description": "",
+		"Amount": 1105596,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "CAO-Administration",
+		"Description": "",
+		"Amount": 413812,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "International Trade",
+		"Description": "",
+		"Amount": 457958,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Human Resources",
+		"Description": "",
+		"Amount": 983210,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "311 C/P Comm Services",
+		"Description": "",
+		"Amount": 210306,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Legal Department",
+		"Description": "",
+		"Amount": 1892269,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Chief Financial Officer",
+		"Description": "",
+		"Amount": 705276,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Accounting",
+		"Description": "",
+		"Amount": 2155823,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Budget Management",
+		"Description": "",
+		"Amount": 629042,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Purchasing/Property Management",
+		"Description": "",
+		"Amount": 768384,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Risk Management & Group Insurance",
+		"Description": "",
+		"Amount": 38176308,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Chief Innovation Officer",
+		"Description": "",
+		"Amount": 10264555,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Municipal Civil Service",
+		"Description": "",
+		"Amount": 544317,
+		"Category": "Government",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Public Works",
+		"Description": "",
+		"Amount": 71227659,
+		"Category": "Infrastructure",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Drainage",
+		"Description": "",
+		"Amount": 19070114,
+		"Category": "Infrastructure",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Traffic, Roads, & Bridges",
+		"Description": "",
+		"Amount": 22600823,
+		"Category": "Infrastructure",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Justice Of The Peace/Constables",
+		"Description": "",
+		"Amount": 228283,
+		"Category": "Public Safety",
+		"Subcategory": "Courts"
+	},
+	{
+		"Name": "City Court",
+		"Description": "",
+		"Amount": 2785019,
+		"Category": "Public Safety",
+		"Subcategory": "Courts"
+	},
+	{
+		"Name": "City Marshal",
+		"Description": "",
+		"Amount": 2356179,
+		"Category": "Public Safety",
+		"Subcategory": "Police"
+	},
+	{
+		"Name": "District Court",
+		"Description": "",
+		"Amount": 2526107,
+		"Category": "Public Safety",
+		"Subcategory": "Courts"
+	},
+	{
+		"Name": "District Attorney",
+		"Description": "",
+		"Amount": 3840781,
+		"Category": "Public Safety",
+		"Subcategory": "Courts"
+	},
+	{
+		"Name": "Adult Correctional Center",
+		"Description": "",
+		"Amount": 6749154,
+		"Category": "Public Safety",
+		"Subcategory": "Jails"
+	},
+	{
+		"Name": "Coroner Office",
+		"Description": "",
+		"Amount": 1372929,
+		"Category": "Public Safety",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Animal Shelter & Care Center",
+		"Description": "",
+		"Amount": 2625850,
+		"Category": "Public Safety",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Juvenile Detention",
+		"Description": "",
+		"Amount": 3410207,
+		"Category": "Public Safety",
+		"Subcategory": "Jails"
+	},
+	{
+		"Name": "City Prosecutor",
+		"Description": "",
+		"Amount": 558408,
+		"Category": "Public Safety",
+		"Subcategory": "Courts"
+	},
+	{
+		"Name": "Police Department",
+		"Description": "",
+		"Amount": 48269895,
+		"Category": "Public Safety",
+		"Subcategory": "Police"
+	},
+	{
+		"Name": "Fire Department",
+		"Description": "",
+		"Amount": 34101278,
+		"Category": "Public Safety",
+		"Subcategory": ""
+	},
+	{
+		"Name": "Health Unit",
+		"Description": "",
+		"Amount": 1652850,
+		"Category": "Public Safety",
+		"Subcategory": ""
+	},
+	{
+		"Name": "LUS",
+		"Description": "",
+		"Amount": 219501246,
+		"Category": "Utilities",
+		"Subcategory": ""
+	},
+	{
+		"Name": "LUS Fiber",
+		"Description": "",
+		"Amount": 42931554,
+		"Category": "Utilities",
+		"Subcategory": ""
+	}
+]
