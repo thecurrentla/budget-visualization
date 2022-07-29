@@ -254,7 +254,7 @@
     flex-grow: 1;
 
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     align-items: baseline;
 
     gap: 0.5em;
