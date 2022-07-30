@@ -32,7 +32,7 @@
 
   $: root = treeMapFn(
     hierarchy($data)
-      .sum((d) => d.budget)
+      .sum((d) => d.amount)
       .sort((a, b) => b.value - a.value)
   );
   // $: console.log(root);
@@ -79,6 +79,15 @@
     return d.data[0];
   }
 
+  function hasParent(d) {
+    console.log(d);
+    if (d.parent) {
+      return true;
+    }
+
+    return false;
+  }
+
   function hasChildren(d) {
     if (d.children && d.children.length > 1) {
       return true;
@@ -120,7 +129,12 @@
         transform={isEqual(d, root) ? `translate(0,${-breadcrumbHeight})` : `translate(${x(d.x0)},${y(d.y0)})`}
         on:mousemove={(e) => {
           if (!isEqual(d, root)) {
+            // let element = e.target.closest(".node");
+            // console.log(e);
+            // console.log(element);
+
             hovered = { e: e, data: d };
+            // console.log(hovered);
           }
         }}
         on:mouseout={() => {
@@ -153,20 +167,21 @@
             height={isEqual(d, root) ? breadcrumbHeight : y(d.y1) - y(d.y0)}
           >
             <header class="label">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-                class="arrow back"
-                class:visible={isEqual(d, root) && d.depth != 0}
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-5.904 2.803a.5.5 0 1 0 .707-.707L6.707 6h2.768a.5.5 0 1 0 0-1H5.5a.5.5 0 0 0-.5.5v3.975a.5.5 0 0 0 1 0V6.707l4.096 4.096z"
-                />
-              </svg>
+              {#if hasParent(d) && isEqual(d, root)}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  class="arrow back"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-5.904 2.803a.5.5 0 1 0 .707-.707L6.707 6h2.768a.5.5 0 1 0 0-1H5.5a.5.5 0 0 0-.5.5v3.975a.5.5 0 0 0 1 0V6.707l4.096 4.096z"
+                  />
+                </svg>
+              {/if}
               <div class="info">
                 {#if d.parent}
                   <div class="value">{formatDollars(d.value)}</div>
@@ -176,7 +191,7 @@
                   <div class="name">Total Budget</div>
                 {/if}
               </div>
-              {#if hasChildren(d)}
+              {#if hasChildren(d) && !isEqual(d, root)}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -184,7 +199,6 @@
                   fill="currentColor"
                   viewBox="0 0 16 16"
                   class="arrow expand"
-                  class:visible={!isEqual(d, root)}
                 >
                   <path
                     fill-rule="evenodd"
@@ -252,7 +266,7 @@
   }
 
   rect.color {
-    fill: var(--theme-color-base);
+    fill: var(--theme-color-light);
   }
 
   .rect-stroke {
@@ -267,19 +281,21 @@
     align-items: center;
     width: 100%;
     padding: min(0.5rem, 0.5em) min(0.75rem, 0.75em);
+    /* background: var(--theme-color-dark); */
 
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial,
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.3;
   }
 
   .arrow:not(.visible) {
-    width: 0;
-    opacity: 0;
+    /* width: 0;
+    opacity: 0; */
   }
-  .arrow.visible:first-child {
+  .arrow:first-child {
     margin-right: 0.5em;
   }
-  .arrow.visible:last-child {
+  .arrow:last-child {
     margin-left: 0.5em;
   }
 

@@ -7,23 +7,24 @@
   import { index, group, flatGroup } from "d3-array";
   import { format } from "d3-format";
 
-  let hovered;
+  let hovered, root;
 
   // function handleZoom(event) {
   //   // alert(event.detail);
   //   ({ nodes, root, x, y } = event.detail);
   // }
 
-  const breadcrumbHeight = 80;
+  const breadcrumbHeight = 3.25 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
   let grouped = group(
     data,
-    (d) => d["category"],
-    (d) => d["subcategory"],
+    (d) => d["level_1"],
+    (d) => d["level_2"],
+    (d) => d["level_3"],
     (d) => d["name"]
   );
-  // console.log(data);
-  // console.log(grouped);
+  console.log(data);
+  console.log(grouped);
   for (let [level1, value1] of grouped) {
     for (let [level2, value2] of value1) {
       if (value1.size === 1 && level2 === "") {
@@ -41,7 +42,7 @@
       }
     }
   }
-  // console.log(grouped);
+  console.log(grouped);
 
   const dataTree = grouped;
 
@@ -66,7 +67,7 @@
           <stop offset="100%" stop-color="rgba(255, 255, 255, 0.01)" />
         </radialGradient>
       </svelte:fragment>
-      <Treemap bind:hovered {formatDollars} {breadcrumbHeight} />
+      <Treemap bind:hovered bind:root {formatDollars} {breadcrumbHeight} />
     </Svg>
     <Tooltip {hovered} {formatDollars} />
   </LayerCake>

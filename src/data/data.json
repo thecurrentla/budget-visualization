@@ -1,277 +1,980 @@
 {
   "data": [
     {
-      "name": "PARC",
-      "description": "",
-      "budget": 17481157,
-      "category": "Community",
-      "subcategory": ""
-    },
-    {
-      "name": "Community Development",
-      "description": "",
-      "budget": 16440195,
-      "category": "Community",
-      "subcategory": ""
-    },
-    {
-      "name": "LA Coop Ext. Service",
-      "description": "",
-      "budget": 140694,
-      "category": "Community",
-      "subcategory": ""
-    },
-    {
-      "name": "Library",
-      "description": "",
-      "budget": 11518784,
-      "category": "Community",
-      "subcategory": ""
-    },
-    {
-      "name": "Council Office Admin",
-      "description": "",
-      "budget": 6780932,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "City Council Office",
-      "description": "",
-      "budget": 248603,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Parish Council Office",
-      "description": "",
-      "budget": 246067,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Registrar Of Voters",
-      "description": "",
-      "budget": 379302,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Mayor-President's Office",
-      "description": "",
-      "budget": 1105596,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "CAO-Administration",
-      "description": "",
-      "budget": 413812,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "International Trade",
-      "description": "",
-      "budget": 457958,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Human Resources",
-      "description": "",
-      "budget": 983210,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "311 C/P Comm Services",
-      "description": "",
-      "budget": 210306,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Legal Department",
-      "description": "",
-      "budget": 1892269,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Chief Financial Officer",
-      "description": "",
-      "budget": 705276,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Accounting",
-      "description": "",
-      "budget": 2155823,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Budget Management",
-      "description": "",
-      "budget": 629042,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Purchasing/Property Management",
-      "description": "",
-      "budget": 768384,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Risk Management & Group Insurance",
-      "description": "",
-      "budget": 38176308,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Chief Innovation Officer",
-      "description": "",
-      "budget": 10264555,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Municipal Civil Service",
-      "description": "",
-      "budget": 544317,
-      "category": "Government",
-      "subcategory": ""
-    },
-    {
-      "name": "Public Works",
-      "description": "Includes blah, blah and blah",
-      "budget": 71227659,
-      "category": "Infrastructure",
-      "subcategory": ""
+      "name": "Streets",
+      "amount": 11800000,
+      "level_1": "Capital Improvements",
+      "level_2": "City-Bond",
+      "level_3": "",
+      "link": ""
     },
     {
       "name": "Drainage",
-      "description": "",
-      "budget": 19070114,
-      "category": "Infrastructure",
-      "subcategory": ""
+      "amount": 6000000,
+      "level_1": "Capital Improvements",
+      "level_2": "City-Bond",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "Traffic, Roads, & Bridges",
-      "description": "",
-      "budget": 22600823,
-      "category": "Infrastructure",
-      "subcategory": ""
+      "name": "Sidewalks",
+      "amount": 2950000,
+      "level_1": "Capital Improvements",
+      "level_2": "City-Bond",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "Justice Of The Peace/Constables",
-      "description": "",
-      "budget": 228283,
-      "category": "Public Safety",
-      "subcategory": "Courts"
+      "name": "Public Buildings",
+      "amount": 8945000,
+      "level_1": "Capital Improvements",
+      "level_2": "City-Bond",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "City Court",
-      "description": "",
-      "budget": 2785019,
-      "category": "Public Safety",
-      "subcategory": "Courts"
+      "name": "Recreation/Parks",
+      "amount": 24750000,
+      "level_1": "Capital Improvements",
+      "level_2": "City-Bond",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "City Marshal",
-      "description": "",
-      "budget": 2356179,
-      "category": "Public Safety",
-      "subcategory": "Police"
+      "name": "Administrative/Reserve For New Debt",
+      "amount": 14144762,
+      "level_1": "Capital Improvements",
+      "level_2": "City-PAYG",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "District Court",
-      "description": "",
-      "budget": 2526107,
-      "category": "Public Safety",
-      "subcategory": "Courts"
+      "name": "Normal Capital",
+      "amount": 13603962,
+      "level_1": "Capital Improvements",
+      "level_2": "City-PAYG",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "District Attorney",
-      "description": "",
-      "budget": 3840781,
-      "category": "Public Safety",
-      "subcategory": "Courts"
+      "name": "Streets",
+      "amount": 16150261,
+      "level_1": "Capital Improvements",
+      "level_2": "City-PAYG",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "Adult Correctional Center",
-      "description": "",
-      "budget": 6749154,
-      "category": "Public Safety",
-      "subcategory": "Jails"
+      "name": "Drainage",
+      "amount": 5282000,
+      "level_1": "Capital Improvements",
+      "level_2": "City-PAYG",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "Coroner Office",
-      "description": "",
-      "budget": 1372929,
-      "category": "Public Safety",
-      "subcategory": ""
+      "name": "Sidewalks",
+      "amount": 95000,
+      "level_1": "Capital Improvements",
+      "level_2": "City-PAYG",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "Animal Shelter & Care Center",
-      "description": "",
-      "budget": 2625850,
-      "category": "Public Safety",
-      "subcategory": ""
+      "name": "Public Buildings",
+      "amount": 6119000,
+      "level_1": "Capital Improvements",
+      "level_2": "City-PAYG",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "Juvenile Detention",
-      "description": "",
-      "budget": 3410207,
-      "category": "Public Safety",
-      "subcategory": "Jails"
+      "name": "Recreation/Parks",
+      "amount": 1321000,
+      "level_1": "Capital Improvements",
+      "level_2": "City-PAYG",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "City Prosecutor",
-      "description": "",
-      "budget": 558408,
-      "category": "Public Safety",
-      "subcategory": "Courts"
+      "name": "Widening/Realignment/Reconstruction",
+      "amount": 5425000,
+      "level_1": "Capital Improvements",
+      "level_2": "Parish",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "Lafayette Police Department",
-      "description": "",
-      "budget": 48269895,
-      "category": "Public Safety",
-      "subcategory": "Police"
+      "name": "Bridges",
+      "amount": 900000,
+      "level_1": "Capital Improvements",
+      "level_2": "Parish",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "Fire Department",
-      "description": "",
-      "budget": 34101278,
-      "category": "Public Safety",
-      "subcategory": ""
+      "name": "Drainage",
+      "amount": 289050,
+      "level_1": "Capital Improvements",
+      "level_2": "Parish",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Public Buildings",
+      "amount": 752935,
+      "level_1": "Capital Improvements",
+      "level_2": "Parish",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Director's Office",
+      "amount": 761524,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Operations & Maintenance",
+      "amount": 4066159,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Athletic Programs",
+      "amount": 689525,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Athletic Programs",
+      "link": ""
+    },
+    {
+      "name": "Swimming",
+      "amount": 148807,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Athletic Programs",
+      "link": ""
+    },
+    {
+      "name": "Tennis",
+      "amount": 318416,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Athletic Programs",
+      "link": ""
+    },
+    {
+      "name": "Therapeutic Recreation",
+      "amount": 20455,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Athletic Programs",
+      "link": ""
+    },
+    {
+      "name": "Centers & Other Programs",
+      "amount": 2859414,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Administration",
+      "amount": 158453,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Arts & Culture",
+      "link": ""
+    },
+    {
+      "name": "HPACC",
+      "amount": 3698803,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Arts & Culture",
+      "link": ""
+    },
+    {
+      "name": "Lafayette Science Museum",
+      "amount": 409366,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Arts & Culture",
+      "link": ""
+    },
+    {
+      "name": "Nature Station",
+      "amount": 182168,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Arts & Culture",
+      "link": ""
+    },
+    {
+      "name": "Maintenance",
+      "amount": 459873,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Arts & Culture",
+      "link": ""
+    },
+    {
+      "name": "J&L Hebert Muni Golf Course",
+      "amount": 1036694,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Golf Courses",
+      "link": ""
+    },
+    {
+      "name": "Vieux Chenes Golf Course",
+      "amount": 1169514,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Golf Courses",
+      "link": ""
+    },
+    {
+      "name": "Wetlands Golf Course",
+      "amount": 1501986,
+      "level_1": "Community",
+      "level_2": "Parks Arts Recreation Culture",
+      "level_3": "Golf Courses",
+      "link": ""
     },
     {
       "name": "Health Unit",
-      "description": "",
-      "budget": 1652850,
-      "category": "Public Safety",
-      "subcategory": ""
+      "amount": 1652850,
+      "level_1": "Community",
+      "level_2": "",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "LUS",
-      "description": "",
-      "budget": 219501246,
-      "category": "Utilities",
-      "subcategory": ""
+      "name": "La Coop Ext Service",
+      "amount": 140694,
+      "level_1": "Community",
+      "level_2": "",
+      "level_3": "",
+      "link": ""
     },
     {
-      "name": "LUS Fiber",
-      "description": "",
-      "budget": 42931554,
-      "category": "Utilities",
-      "subcategory": ""
+      "name": "Library",
+      "amount": 11518784,
+      "level_1": "Community",
+      "level_2": "",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "CAO-Administration",
+      "amount": 413812,
+      "level_1": "Government",
+      "level_2": "CAO",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "International Trade",
+      "amount": 457958,
+      "level_1": "Government",
+      "level_2": "CAO",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Human Resources",
+      "amount": 983210,
+      "level_1": "Government",
+      "level_2": "CAO",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Mailroom",
+      "amount": 92215,
+      "level_1": "Government",
+      "level_2": "CAO",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "311 C/P Comm Srvs",
+      "amount": 210306,
+      "level_1": "Government",
+      "level_2": "CAO",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Planning",
+      "amount": 10559374,
+      "level_1": "Government",
+      "level_2": "Community Development & Planning",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Development",
+      "amount": 724661,
+      "level_1": "Government",
+      "level_2": "Community Development & Planning",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Codes",
+      "amount": 1896348,
+      "level_1": "Government",
+      "level_2": "Community Development & Planning",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Compliance",
+      "amount": 204233,
+      "level_1": "Government",
+      "level_2": "Community Development & Planning",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Alcohol & Noise Control",
+      "amount": 347311,
+      "level_1": "Government",
+      "level_2": "Community Development & Planning",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Permitting",
+      "amount": 572526,
+      "level_1": "Government",
+      "level_2": "Community Development & Planning",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Grants Administration",
+      "amount": 977593,
+      "level_1": "Government",
+      "level_2": "Community Development & Planning",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Human Services",
+      "amount": 103147,
+      "level_1": "Government",
+      "level_2": "Community Development & Planning",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Director's Office",
+      "amount": 556127,
+      "level_1": "Government",
+      "level_2": "Community Development & Planning",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Office Of Communities",
+      "amount": 498875,
+      "level_1": "Government",
+      "level_2": "Community Development & Planning",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Council Office Admin",
+      "amount": 6780932,
+      "level_1": "Government",
+      "level_2": "Councils",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Council Office-City",
+      "amount": 248603,
+      "level_1": "Government",
+      "level_2": "Councils",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Council Office-Parish",
+      "amount": 246067,
+      "level_1": "Government",
+      "level_2": "Councils",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Chief Financial Officer",
+      "amount": 705276,
+      "level_1": "Government",
+      "level_2": "Finance",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Accounting",
+      "amount": 2155823,
+      "level_1": "Government",
+      "level_2": "Finance",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Budget Management",
+      "amount": 629042,
+      "level_1": "Government",
+      "level_2": "Finance",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Purchasing/Property Management",
+      "amount": 768384,
+      "level_1": "Government",
+      "level_2": "Finance",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Risk Management & Group Insurance",
+      "amount": 38176308,
+      "level_1": "Government",
+      "level_2": "Finance",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Records Management",
+      "amount": 127294,
+      "level_1": "Government",
+      "level_2": "IT",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Chief Innovation Officer",
+      "amount": 10264555,
+      "level_1": "Government",
+      "level_2": "IT",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Mayor-President's Office",
+      "amount": 1063704,
+      "level_1": "Government",
+      "level_2": "Mayor-President",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Cultural Economy",
+      "amount": 41892,
+      "level_1": "Government",
+      "level_2": "Mayor-President",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Registrar Of Voters",
+      "amount": 379302,
+      "level_1": "Government",
+      "level_2": "",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Legal Department",
+      "amount": 1892269,
+      "level_1": "Government",
+      "level_2": "",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Municipal Civil Service",
+      "amount": 544317,
+      "level_1": "Government",
+      "level_2": "",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Director's Office",
+      "amount": 324733,
+      "level_1": "Infrastructure",
+      "level_2": "Drainage",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Operations Division",
+      "amount": 18745381,
+      "level_1": "Infrastructure",
+      "level_2": "Drainage",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Director's Office",
+      "amount": 387509,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Capital Improvements-Proj",
+      "amount": 32152060,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Capital Improvements-Other",
+      "amount": 3733115,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Administration",
+      "amount": 1113666,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Building Maintenance",
+      "amount": 612758,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "Facilities Maintenance",
+      "link": ""
+    },
+    {
+      "name": "City Hall Maintenance",
+      "amount": 1859565,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "Facilities Maintenance",
+      "link": ""
+    },
+    {
+      "name": "Rosa Parks Transportation Center",
+      "amount": 172389,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "Facilities Maintenance",
+      "link": ""
+    },
+    {
+      "name": "Courthouse Complex",
+      "amount": 1947308,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "Facilities Maintenance",
+      "link": ""
+    },
+    {
+      "name": "Adult Correctional Center",
+      "amount": 711500,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "Facilities Maintenance",
+      "link": ""
+    },
+    {
+      "name": "War Memorial Building",
+      "amount": 286226,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "Facilities Maintenance",
+      "link": ""
+    },
+    {
+      "name": "Chenier Center",
+      "amount": 426530,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "Facilities Maintenance",
+      "link": ""
+    },
+    {
+      "name": "Vehicle Maintenance",
+      "amount": 8189937,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Cng Station",
+      "amount": 247453,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Environmental Quality",
+      "amount": 19387643,
+      "level_1": "Infrastructure",
+      "level_2": "Public Works",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Director's Office",
+      "amount": 319939,
+      "level_1": "Infrastructure",
+      "level_2": "Traffic, Roads, & Bridges",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Operations Division",
+      "amount": 10310536,
+      "level_1": "Infrastructure",
+      "level_2": "Traffic, Roads, & Bridges",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Traffic Engineering",
+      "amount": 3298779,
+      "level_1": "Infrastructure",
+      "level_2": "Traffic, Roads, & Bridges",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Traffic Signals Maintenance",
+      "amount": 1330049,
+      "level_1": "Infrastructure",
+      "level_2": "Traffic, Roads, & Bridges",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Transit Operations",
+      "amount": 5699124,
+      "level_1": "Infrastructure",
+      "level_2": "Traffic, Roads, & Bridges",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Parking Program",
+      "amount": 1642396,
+      "level_1": "Infrastructure",
+      "level_2": "Traffic, Roads, & Bridges",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Administration",
+      "amount": 1099622,
+      "level_1": "Public Safety",
+      "level_2": "Fire",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Emergency Operations",
+      "amount": 27385043,
+      "level_1": "Public Safety",
+      "level_2": "Fire",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Technical Operations",
+      "amount": 3751143,
+      "level_1": "Public Safety",
+      "level_2": "Fire",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Parishwide Fire Protection",
+      "amount": 1865470,
+      "level_1": "Public Safety",
+      "level_2": "Fire",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Administration",
+      "amount": 38777440,
+      "level_1": "Public Safety",
+      "level_2": "Police",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Patrol",
+      "amount": 1479538,
+      "level_1": "Public Safety",
+      "level_2": "Police",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Services",
+      "amount": 7303467,
+      "level_1": "Public Safety",
+      "level_2": "Police",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Criminal Investigation",
+      "amount": 709450,
+      "level_1": "Public Safety",
+      "level_2": "Police",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "City Marshal",
+      "amount": 2356179,
+      "level_1": "Public Safety",
+      "level_2": "",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Justice Of Peace/Constables",
+      "amount": 228283,
+      "level_1": "Public Safety",
+      "level_2": "Judicial",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "City Court",
+      "amount": 2785019,
+      "level_1": "Public Safety",
+      "level_2": "Judicial",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "City Prosecutor",
+      "amount": 558408,
+      "level_1": "Public Safety",
+      "level_2": "Judicial",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "District Court",
+      "amount": 2526107,
+      "level_1": "Public Safety",
+      "level_2": "Judicial",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "District Attorney",
+      "amount": 3840781,
+      "level_1": "Public Safety",
+      "level_2": "Judicial",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Adult Correctional Center",
+      "amount": 6749154,
+      "level_1": "Public Safety",
+      "level_2": "Corrections",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Juvenile Detention",
+      "amount": 3410207,
+      "level_1": "Public Safety",
+      "level_2": "Corrections",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Coroner Office",
+      "amount": 1372929,
+      "level_1": "Public Safety",
+      "level_2": "",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Animal Shelter & Care Center",
+      "amount": 2625850,
+      "level_1": "Public Safety",
+      "level_2": "",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Police & Fire Civil Serv",
+      "amount": 70383,
+      "level_1": "Public Safety",
+      "level_2": "",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Director's Office",
+      "amount": 2734640,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Utility-General Accounts",
+      "amount": 59476372,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Support Services",
+      "amount": 2865112,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Customer Service",
+      "amount": 4670518,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Environmental Compliance",
+      "amount": 1927992,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Power Production",
+      "amount": 120654055,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Electric Operations",
+      "amount": 19003579,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Water Operations",
+      "amount": 9604102,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Wastewater Operations",
+      "amount": 14241644,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Engineering",
+      "amount": 11653102,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Capital Appropriations",
+      "amount": 11443000,
+      "level_1": "Utilities",
+      "level_2": "LUS",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Administration & Support",
+      "amount": 508006,
+      "level_1": "Utilities",
+      "level_2": "LUS Fiber",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "General Accounts",
+      "amount": 18018836,
+      "level_1": "Utilities",
+      "level_2": "LUS Fiber",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Operations",
+      "amount": 2631763,
+      "level_1": "Utilities",
+      "level_2": "LUS Fiber",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Warehouse",
+      "amount": 200262,
+      "level_1": "Utilities",
+      "level_2": "LUS Fiber",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Business Support Services",
+      "amount": 15200222,
+      "level_1": "Utilities",
+      "level_2": "LUS Fiber",
+      "level_3": "",
+      "link": ""
+    },
+    {
+      "name": "Engineering",
+      "amount": 6372465,
+      "level_1": "Utilities",
+      "level_2": "LUS Fiber",
+      "level_3": "",
+      "link": ""
     }
   ],
   "descriptions": {

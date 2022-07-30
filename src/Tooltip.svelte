@@ -63,12 +63,13 @@
 
 <style>
   .tooltip {
-    border: 1px solid var(--gray-light);
-    border-radius: 3px;
     position: absolute;
     visibility: hidden;
     pointer-events: none;
-    padding: 0.75rem;
+
+    border: 1px solid var(--gray-light);
+    border-radius: 3px;
+    padding: 0.75em;
     background-color: rgba(255, 255, 255, 0.9);
     width: 240px;
     z-index: 99;
