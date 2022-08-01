@@ -264,9 +264,9 @@
   }
 
   .rect-color {
-    /* fill: var(--theme-color-light); */
-    stroke: var(--theme-color-base);
-    stroke-width: 2;
+    fill: var(--theme-color-light);
+    /* stroke: var(--theme-color-base);
+    stroke-width: 2; */
   }
   .rect-stroke {
     fill: none;
