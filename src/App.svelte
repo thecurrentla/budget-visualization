@@ -1,6 +1,7 @@
 <script>
   import { LayerCake, Svg } from "layercake";
   import { data } from "./data/data.json";
+  import { descriptions } from "./data/data.json";
   import Treemap from "./Treemap.svelte";
   import Tooltip from "./Tooltip.svelte";
   import { group, InternMap } from "d3-array";
@@ -45,13 +46,29 @@
   }
   promoteChildItems(grouped);
 
+  console.log(grouped);
+
+  // Adds descriptions into data
+  function addMetadata(map) {
+    for (let [key, value] of map) {
+      console.log(key);
+      console.log(value);
+      if (value.constructor === InternMap) {
+        addMetadata(value);
+        if (key === "") {
+        }
+      }
+    }
+  }
+  // addMetadata(grouped);
+
   const dataTree = grouped;
 </script>
 
 <div class="chart-container">
   <LayerCake data={dataTree} padding={{ top: breadcrumbHeight, right: 0, bottom: 0, left: 0 }}>
     <Svg>
-      <svelte:fragment slot="defs">
+      <!-- <svelte:fragment slot="defs">
         <radialGradient id="circle-gray" gradientTransform="translate(-0.25 -0.25) scale(2, 2)">
           <stop offset="2%" stop-color="rgba(255, 255, 255, 0.1)" />
           <stop offset="30%" stop-color="#ff0000" />
@@ -94,10 +111,10 @@
           <stop offset="60%" stop-color="#838bc5" />
           <stop offset="98%" stop-color="rgba(0, 0, 0, 0.1)" />
         </radialGradient>
-      </svelte:fragment>
+      </svelte:fragment> -->
       <Treemap bind:hovered bind:root {formatDollars} {breadcrumbHeight} />
     </Svg>
-    <Tooltip {hovered} {formatDollars} />
+    <!-- <Tooltip {hovered} {formatDollars} /> -->
   </LayerCake>
 </div>
 

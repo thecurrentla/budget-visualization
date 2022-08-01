@@ -12,15 +12,15 @@ async function getAndWriteSheet(opt, cb) {
   const base = "https://docs.google.com/spreadsheets/d/e";
   const url = `${base}/${opt.id}/pub?gid=${opt.gid}&single=true&output=csv`;
 
+  const file = `${CWD}/${opt.filepath || "src/data/data.json"}`;
+  const file_json = file.replace(".csv", ".json");
+
   try {
     const response = await fetch(url);
     // console.log(response.body);
 
     if (response.ok) {
       const body = await response.text();
-      const file = `${CWD}/${opt.filepath || "src/data/data.json"}`;
-      const file_json = file.replace(".csv", ".json");
-      console.log(file_json);
 
       fs.writeFile(file, body, (err) => {
         if (err) throw err;
@@ -39,34 +39,6 @@ async function getAndWriteSheet(opt, cb) {
         );
         cb();
       });
-
-      // Parse as JSON, then write that
-      // parse(
-      //   body,
-      //   {
-      //     columns: true,
-      //     skip_empty_lines: true,
-      //   },
-      //   function (err, records) {
-      //     fs.writeFile(file_json, records, (err) => {
-      //       if (err) throw err;
-      //       console.log(
-      //         "json with id",
-      //         "\x1b[32m",
-      //         `${opt.id}`,
-      //         "\x1b[0m",
-      //         "and gid",
-      //         "\x1b[32m",
-      //         `${opt.gid}`,
-      //         "\x1b[0m",
-      //         "successfully written to",
-      //         "\x1b[34m",
-      //         `${file_json}\n`
-      //       );
-      //       cb();
-      //     });
-      //   }
-      // );
     }
   } catch (err) {
     console.error(err);

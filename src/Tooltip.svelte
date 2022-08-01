@@ -73,6 +73,8 @@
     background-color: rgba(255, 255, 255, 0.9);
     width: 240px;
     z-index: 99;
+
+    line-height: 1.3;
   }
   .tooltip.active {
     visibility: visible;
