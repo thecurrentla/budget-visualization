@@ -10,6 +10,7 @@
     "fetch-sheets": "node scripts/fetch-sheets.js"
   },
   "devDependencies": {
+    "@fast-csv/parse": "^4.3.6",
     "@sindresorhus/slugify": "^2.1.0",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
     "csv": "^6.2.0",

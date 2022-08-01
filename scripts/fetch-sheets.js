@@ -1,7 +1,7 @@
 import fs from "fs";
 import fetch from "node-fetch";
 
-import { parse } from "csv-parse";
+import { parse } from "@fast-csv/parse";
 
 const CWD = process.cwd();
 const CONFIG_PATH = `${CWD}/config.json`;
@@ -22,6 +22,21 @@ async function getAndWriteSheet(opt, cb) {
     if (response.ok) {
       const body = await response.text();
 
+      // const stream = parse({ headers: true })
+      //   .validate((data) => data.id !== "")
+      //   .on("error", (error) => console.error(error))
+      //   .on("data", (row) => console.log(row))
+      //   .on("end", (rowCount) => {
+      //     console.log(`Parsed ${rowCount} rows`);
+      //     cb();
+      //   });
+
+      // stream.write(body);
+
+      // console.log(stream);
+
+      // stream.end();
+
       fs.writeFile(file, body, (err) => {
         if (err) throw err;
         console.log(
@@ -39,6 +54,23 @@ async function getAndWriteSheet(opt, cb) {
         );
         cb();
       });
+
+      // fs.writeFile(file_json, body, (err) => {
+      //   if (err) throw err;
+      //   console.log(
+      //     "json with id",
+      //     "\x1b[32m",
+      //     `${opt.id}`,
+      //     "\x1b[0m",
+      //     "and gid",
+      //     "\x1b[32m",
+      //     `${opt.gid}`,
+      //     "\x1b[0m",
+      //     "successfully written to",
+      //     "\x1b[34m",
+      //     `${file_json}\n`
+      //   );
+      // });
     }
   } catch (err) {
     console.error(err);
