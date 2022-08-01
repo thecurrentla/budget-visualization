@@ -32,7 +32,7 @@
 
   $: root = treeMapFn(
     hierarchy($data)
-      .sum((d) => d.amount)
+      .sum((d) => d.amount_num)
       .sort((a, b) => b.value - a.value)
   );
   // $: console.log(root);
@@ -80,7 +80,7 @@
   }
 
   function hasParent(d) {
-    console.log(d);
+    // console.log(d);
     if (d.parent) {
       return true;
     }

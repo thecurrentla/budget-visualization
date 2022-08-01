@@ -5,16 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npm run fetch-sheets && vite build",
+    "preview": "vite preview",
+    "fetch-sheets": "node scripts/fetch-sheets.js"
   },
   "devDependencies": {
     "@sindresorhus/slugify": "^2.1.0",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "csvtojson": "^2.0.10",
     "d3": "^7.6.1",
     "layercake": "^7.0.0",
     "lodash": "^4.17.21",
+    "node-fetch": "^3.2.10",
     "svelte": "^3.49.0",
     "vite": "^3.0.0"
+  },
+  "dependencies": {
+    "csv-parse": "^5.3.0"
   }
 }
