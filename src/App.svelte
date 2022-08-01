@@ -52,16 +52,47 @@
   <LayerCake data={dataTree} padding={{ top: breadcrumbHeight, right: 0, bottom: 0, left: 0 }}>
     <Svg>
       <svelte:fragment slot="defs">
-        <radialGradient id="white-circle" gradientTransform="translate(0.03 -0.09) scale(1.33, 1.34)">
-          <stop offset="1%" stop-color="rgba(255, 255, 255, 0.28)" />
-          <stop offset="11.8%" stop-color="rgba(255, 255, 255, 0.36)" />
-          <stop offset="22.6%" stop-color="rgba(255, 255, 255, 0.44)" />
-          <stop offset="33.4%" stop-color="rgba(255, 255, 255, 0.51)" />
-          <stop offset="55%" stop-color="rgba(255, 255, 255, 0.67)" />
-          <stop offset="64%" stop-color="rgba(255, 255, 255, 0.54)" />
-          <stop offset="73%" stop-color="rgba(255, 255, 255, 0.41)" />
-          <stop offset="82%" stop-color="rgba(255, 255, 255, 0.27)" />
-          <stop offset="100%" stop-color="rgba(255, 255, 255, 0.01)" />
+        <radialGradient id="circle-gray" gradientTransform="translate(-0.25 -0.25) scale(2, 2)">
+          <stop offset="2%" stop-color="rgba(255, 255, 255, 0.1)" />
+          <stop offset="30%" stop-color="#ff0000" />
+          <stop offset="60%" stop-color="#ff0000" />
+          <stop offset="98%" stop-color="rgba(0, 0, 0, 0.1)" />
+        </radialGradient>
+        <radialGradient id="circle-teal" gradientTransform="translate(-0.25 -0.25) scale(2, 2)">
+          <stop offset="2%" stop-color="rgba(255, 255, 255, 0.1)" />
+          <stop offset="30%" stop-color="#6bbaca" />
+          <stop offset="60%" stop-color="#6bbaca" />
+          <stop offset="98%" stop-color="rgba(0, 0, 0, 0.1)" />
+        </radialGradient>
+        <radialGradient id="circle-blue" gradientTransform="translate(-0.25 -0.25) scale(2, 2)">
+          <stop offset="2%" stop-color="rgba(255, 255, 255, 0.1)" />
+          <stop offset="30%" stop-color="#4dbfdf" />
+          <stop offset="60%" stop-color="#4dbfdf" />
+          <stop offset="98%" stop-color="rgba(0, 0, 0, 0.1)" />
+        </radialGradient>
+        <radialGradient id="circle-green" gradientTransform="translate(-0.25 -0.25) scale(2, 2)">
+          <stop offset="2%" stop-color="rgba(255, 255, 255, 0.1)" />
+          <stop offset="30%" stop-color="#79a240" />
+          <stop offset="60%" stop-color="#79a240" />
+          <stop offset="98%" stop-color="rgba(0, 0, 0, 0.1)" />
+        </radialGradient>
+        <radialGradient id="circle-yellow" gradientTransform="translate(-0.25 -0.25) scale(2, 2)">
+          <stop offset="2%" stop-color="rgba(255, 255, 255, 0.1)" />
+          <stop offset="30%" stop-color="#f8de00" />
+          <stop offset="60%" stop-color="#f8de00" />
+          <stop offset="98%" stop-color="rgba(0, 0, 0, 0.1)" />
+        </radialGradient>
+        <radialGradient id="circle-red" gradientTransform="translate(-0.25 -0.25) scale(2, 2)">
+          <stop offset="2%" stop-color="rgba(255, 255, 255, 0.1)" />
+          <stop offset="30%" stop-color="#f27558" />
+          <stop offset="60%" stop-color="#f27558" />
+          <stop offset="98%" stop-color="rgba(0, 0, 0, 0.1)" />
+        </radialGradient>
+        <radialGradient id="circle-purple" gradientTransform="translate(-0.25 -0.25) scale(2, 2)">
+          <stop offset="2%" stop-color="rgba(255, 255, 255, 0.1)" />
+          <stop offset="30%" stop-color="#838bc5" />
+          <stop offset="60%" stop-color="#838bc5" />
+          <stop offset="98%" stop-color="rgba(0, 0, 0, 0.1)" />
         </radialGradient>
       </svelte:fragment>
       <Treemap bind:hovered bind:root {formatDollars} {breadcrumbHeight} />
