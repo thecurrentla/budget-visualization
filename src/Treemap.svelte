@@ -156,7 +156,7 @@
   {#each nodes as d, i (`${d.data[0]}-${d.depth}-${d.value}`)}
     {#if d.value > 0}
       {@const width = x(d.x1) - x(d.x0)}
-      {@const height = isEqual(d, root) ? breadcrumbHeight : y(d.y1) - y(d.y0)}
+      {@const height = isEqual(d, root) ? $height : y(d.y1) - y(d.y0)}
 
       {@const metadata = descriptions[getID(d)]}
 
@@ -285,6 +285,8 @@
     text-align: left;
 
     display: block;
+
+    color: black;
   }
 
   .node {
@@ -344,7 +346,7 @@
   }
   .wrapper:hover .arrow,
   .wrapper:focus .arrow {
-    transform: scale(1.25);
+    /* transform: scale(1.25); */
   }
 
   .node.root .wrapper {
@@ -381,6 +383,7 @@
 
   .arrow {
     transition: transform 250ms ease;
+    transform-origin: center center;
   }
   .arrow:first-child {
     margin-right: 0.5em;
