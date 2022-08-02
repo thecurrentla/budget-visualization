@@ -96,12 +96,21 @@
 
   function getID(d, separator = " / ") {
     let id = [];
-    id.push(d.data[0]);
-    while (d.depth > 1) {
-      d = d.parent;
+    if (d.data[0] !== undefined) {
       id.push(d.data[0]);
     }
-    return id.reverse().join(separator);
+
+    while (d.depth > 1) {
+      d = d.parent;
+      if (d.data[0] !== undefined) {
+        id.push(d.data[0]);
+      }
+    }
+
+    let id_return = id.reverse().join(separator);
+    console.log(id);
+    console.log(id_return);
+    return id_return;
   }
 
   function getSizeRatio(d, root) {
@@ -265,7 +274,7 @@
               }
             }}
           >
-            <header class="header" style:min-height={breadcrumbHeight + "px"}>
+            <header class="header" style:min-height={isRoot ? breadcrumbHeight + "px" : ""}>
               {#if hasParent(d) && isRoot}
                 <svg xmlns="http://www.w3.org/2000/svg" class="title-icon title-icon--large" viewBox="0 0 16 16">
                   <use xlink:href="#icon-arrow-up-left-circle" />
@@ -273,8 +282,7 @@
               {/if}
               <div class="title">
                 {#if d.parent && d.data.name}
-                  <!-- <div class="name" data-bottom="?">{d.data.name ? d.data.name : ""}</div> -->
-                  <div class="amount">{d.data.amount ? d.data.amount : ""}</div>
+                  <div><span class="amount">{d.data.amount ? d.data.amount : ""}</span></div>
                 {:else if isRoot && d.parent}
                   <div class="name">{d.data[0] ? d.data[0] : ""}</div>
                 {:else if d.parent}
@@ -285,7 +293,7 @@
                   <div class="name">Total Budget</div>
                 {/if}
               </div>
-              {#if isRoot}
+              {#if isRoot && !isBottomLevel}
                 <!-- {#if metadata && (metadata.budget_link || metadata.info_link)}
                   <div>
                     <NodeLinks {metadata} budgetLink={metadata.budget_link} infoLink={metadata.info_link} />
@@ -298,7 +306,7 @@
                 </svg>
               {/if}
             </header>
-            {#if !isRoot && getSizeRatio(d, root) > 0.05}
+            {#if getSizeRatio(d, root) > 0.05}
               <div class="content">
                 {#if metadata && metadata.description}
                   <div class="description">{metadata.description}</div>
