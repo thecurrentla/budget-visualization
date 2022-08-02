@@ -1,10 +1,12 @@
 <script>
   import { LayerCake, Svg } from "layercake";
-  import { data } from "./data/data.json";
-  import { descriptions } from "./data/data.json";
+
   import Treemap from "./Treemap.svelte";
   import Tooltip from "./Tooltip.svelte";
   import Breadcrumb from "./Breadcrumb.svelte";
+
+  import data from "./data/2022-data.json";
+
   import { group, InternMap } from "d3-array";
   import { format } from "d3-format";
 
@@ -16,20 +18,15 @@
 
   const breadcrumbHeight = 3.25 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
-  // If you need a list of levels:
-  // const level_1 = Array.from(group(data, (d) => d["level_1"]).keys());
-  // const level_2 = Array.from(group(data, (d) => d["level_2"]).keys());
-  // const level_3 = Array.from(group(data, (d) => d["level_3"]).keys());
-  // const levels = level_1.concat(level_2, level_3).filter((n) => n);
-
   // Group all the data
   let grouped = group(
-    data,
+    Object.values(data),
     (d) => d["level_1"],
     (d) => d["level_2"],
     (d) => d["level_3"],
     (d) => d["name"]
   );
+  // console.log(grouped);
 
   // Promotes child items to the next level if they have no parent label, allowing the heirarchy to work with any number of levels
   function promoteChildItems(map) {
@@ -46,7 +43,7 @@
     }
   }
   promoteChildItems(grouped);
-  console.log(grouped);
+  // console.log(grouped);
 
   const dataTree = grouped;
 </script>

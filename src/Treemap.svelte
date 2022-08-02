@@ -8,24 +8,17 @@
 
   import NodeLinks from "./NodeLinks.svelte";
 
-  import { descriptions } from "./data/data.json";
+  import descriptions from "./data/2022-descriptions.json";
 
   export let root, formatDollars, breadcrumbHeight;
 
   const { data, width, height } = getContext("LayerCake");
 
-  console.log($width);
-
-  let treemapType = treemapSquarify;
-  if ($width < 767) {
-    treemapType = treemapBinary;
-  }
-
   $: x = scaleLinear().domain([0, $width]).range([0, $width]);
   $: y = scaleLinear().domain([0, $height]).range([0, $height]);
 
   $: treeMapFn = treemap()
-    .tile(treemapType)
+    .tile(treemapSquarify.ratio(2, 1))
     // .padding(1)
     // .paddingInner(5)
     // .paddingOuter(5)
@@ -140,14 +133,16 @@
     switch (category) {
       case "Utilities":
         return "yellow";
-      case "Government":
-        return "purple";
-      case "Infrastructure":
+      case "Capital Improvements":
         return "blue";
+      case "Infrastructure":
+        return "green";
       case "Public Safety":
         return "red";
+      case "Government":
+        return "purple";
       case "Community":
-        return "green";
+        return "teal";
       default:
       // console.log(`No color found for ${category}.`);
     }
