@@ -383,7 +383,7 @@
   .wrapper {
     width: 100%;
     height: 100%;
-    padding: 0;
+    padding: 0.5em;
 
     display: flex;
     flex-flow: column;
@@ -413,7 +413,7 @@
 
   .header,
   .content {
-    padding: 0.5em;
+    /* padding: 0.5em; */
     /* padding: min(0.5rem, 0.5em); */
 
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial,
@@ -430,6 +430,7 @@
     width: 100%;
   }
   .content {
+    padding-top: 0.25em;
   }
 
   .title {
