@@ -284,7 +284,7 @@
                 {#if d.parent && d.data.name}
                   <div><span class="amount">{d.data.amount ? d.data.amount : ""}</span></div>
                 {:else if isRoot && d.parent}
-                  <div class="amount">{formatDollars(d.value)}</div>
+                  <!-- <div class="amount">{formatDollars(d.value)}</div> -->
                   <div class="name">{d.data[0] ? d.data[0] : ""}</div>
                 {:else if d.parent}
                   <div class="amount">{formatDollars(d.value)}</div>
