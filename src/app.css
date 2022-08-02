@@ -29,11 +29,11 @@ body {
   line-height: 0;
 }
 .lp-logo svg {
-  --logo-width: clamp(2rem, 1.9rem + 1vw, 4rem);
+  --logo-width: clamp(2rem, 1.9rem + 1vw, 3rem);
 
-  width: 4rem;
+  width: 3rem;
   width: var(--logo-width);
-  height: 4rem;
+  height: 3rem;
   height: var(--logo-width);
 }
 
