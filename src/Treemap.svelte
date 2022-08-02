@@ -469,10 +469,7 @@
   }
 
   .content {
-    font-size: 0.9em;
     font-weight: 600;
-
-    font-size: var(--content-font-size, 1em);
   }
 
   .content > * + * {
