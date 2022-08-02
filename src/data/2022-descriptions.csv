@@ -1,3 +1,9 @@
 id,description,budget_link,info_link
-Community / Parks & Recreation,This includes blah and blah and blah.,,
-Government / Community Development & Planning / Human Services,counseling services provided to low income folks,,
+Capital Improvements,"Roads, drainage, buildings, other infrastructure",,
+Capital Improvements / City - Bonds,Funded with debt ,,
+Capital Improvements / City - Cash,Paid with general fund revenue ,,
+Capital Improvements / City - Cash / Normal Capital and Reserves,Accounted by department ,,
+Capital Improvements / Parish - Cash,Paid with general fund revenue,,
+Community,"Housing, Health, Social Services, Recreation, Culture ",,
+Utilities / LUS / Power Production,"Power purchases, transmission charges",https://thecurrentla.com/wp-content/uploads/lcg-proposed-2023-budget-by-dept-1.pdf#page=257,
+Utilities / LUS / Administration,"ILOT, interest, depreciation",,

@@ -1,147 +1,147 @@
 {
   "data": [
     {
-      "id": "Capital Improvements / City-Bond / Streets",
+      "id": "Capital Improvements / City - Bonds / Streets",
       "name": "Streets",
       "amount": "$11,800,000",
       "amount_num": 11800000,
       "level_1": "Capital Improvements",
-      "level_2": "City-Bond",
+      "level_2": "City - Bonds",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-Bond / Drainage",
+      "id": "Capital Improvements / City - Bonds / Drainage",
       "name": "Drainage",
       "amount": "$6,000,000",
       "amount_num": 6000000,
       "level_1": "Capital Improvements",
-      "level_2": "City-Bond",
+      "level_2": "City - Bonds",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-Bond / Sidewalks",
+      "id": "Capital Improvements / City - Bonds / Sidewalks",
       "name": "Sidewalks",
       "amount": "$2,950,000",
       "amount_num": 2950000,
       "level_1": "Capital Improvements",
-      "level_2": "City-Bond",
+      "level_2": "City - Bonds",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-Bond / Public Buildings",
+      "id": "Capital Improvements / City - Bonds / Public Buildings",
       "name": "Public Buildings",
       "amount": "$8,945,000",
       "amount_num": 8945000,
       "level_1": "Capital Improvements",
-      "level_2": "City-Bond",
+      "level_2": "City - Bonds",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-Bond / Recreation/Parks",
+      "id": "Capital Improvements / City - Bonds / Recreation/Parks",
       "name": "Recreation/Parks",
       "amount": "$24,750,000",
       "amount_num": 24750000,
       "level_1": "Capital Improvements",
-      "level_2": "City-Bond",
+      "level_2": "City - Bonds",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-PAYG / Administrative/Reserve For New Debt",
-      "name": "Administrative/Reserve For New Debt",
+      "id": "Capital Improvements / City - Cash / Administrative/Program Costs",
+      "name": "Administrative/Program Costs",
       "amount": "$14,144,762",
       "amount_num": 14144762,
       "level_1": "Capital Improvements",
-      "level_2": "City-PAYG",
+      "level_2": "City - Cash",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-PAYG / Normal Capital",
-      "name": "Normal Capital",
+      "id": "Capital Improvements / City - Cash / Normal Capital and Reserves",
+      "name": "Normal Capital and Reserves",
       "amount": "$13,603,962",
       "amount_num": 13603962,
       "level_1": "Capital Improvements",
-      "level_2": "City-PAYG",
+      "level_2": "City - Cash",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-PAYG / Streets",
+      "id": "Capital Improvements / City - Cash / Streets",
       "name": "Streets",
       "amount": "$16,150,261",
       "amount_num": 16150261,
       "level_1": "Capital Improvements",
-      "level_2": "City-PAYG",
+      "level_2": "City - Cash",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-PAYG / Drainage",
+      "id": "Capital Improvements / City - Cash / Drainage",
       "name": "Drainage",
       "amount": "$5,282,000",
       "amount_num": 5282000,
       "level_1": "Capital Improvements",
-      "level_2": "City-PAYG",
+      "level_2": "City - Cash",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-PAYG / Sidewalks",
+      "id": "Capital Improvements / City - Cash / Sidewalks",
       "name": "Sidewalks",
       "amount": "$95,000",
       "amount_num": 95000,
       "level_1": "Capital Improvements",
-      "level_2": "City-PAYG",
+      "level_2": "City - Cash",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-PAYG / Public Buildings",
+      "id": "Capital Improvements / City - Cash / Public Buildings",
       "name": "Public Buildings",
       "amount": "$6,119,000",
       "amount_num": 6119000,
       "level_1": "Capital Improvements",
-      "level_2": "City-PAYG",
+      "level_2": "City - Cash",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / City-PAYG / Recreation/Parks",
+      "id": "Capital Improvements / City - Cash / Recreation/Parks",
       "name": "Recreation/Parks",
       "amount": "$1,321,000",
       "amount_num": 1321000,
       "level_1": "Capital Improvements",
-      "level_2": "City-PAYG",
+      "level_2": "City - Cash",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / Parish / Widening/Realignment/Reconstruction",
+      "id": "Capital Improvements / Parish - Cash / Widening/Realignment/Reconstruction",
       "name": "Widening/Realignment/Reconstruction",
       "amount": "$5,425,000",
       "amount_num": 5425000,
       "level_1": "Capital Improvements",
-      "level_2": "Parish",
+      "level_2": "Parish - Cash",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / Parish / Bridges",
+      "id": "Capital Improvements / Parish - Cash / Bridges",
       "name": "Bridges",
       "amount": "$900,000",
       "amount_num": 900000,
       "level_1": "Capital Improvements",
-      "level_2": "Parish",
+      "level_2": "Parish - Cash",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / Parish / Drainage",
+      "id": "Capital Improvements / Parish - Cash / Drainage",
       "name": "Drainage",
       "amount": "$289,050",
       "amount_num": 289050,
       "level_1": "Capital Improvements",
-      "level_2": "Parish",
+      "level_2": "Parish - Cash",
       "level_3": ""
     },
     {
-      "id": "Capital Improvements / Parish / Public Buildings",
+      "id": "Capital Improvements / Parish - Cash / Public Buildings",
       "name": "Public Buildings",
       "amount": "$752,935",
       "amount_num": 752935,
       "level_1": "Capital Improvements",
-      "level_2": "Parish",
+      "level_2": "Parish - Cash",
       "level_3": ""
     },
     {
@@ -253,8 +253,8 @@
       "level_3": "Arts & Culture"
     },
     {
-      "id": "Community / Parks & Recreation / Golf Courses / J&L Hebert Muni Golf Course",
-      "name": "J&L Hebert Muni Golf Course",
+      "id": "Community / Parks & Recreation / Golf Courses / Hebert Muni Golf Course",
+      "name": "Hebert Muni Golf Course",
       "amount": "$1,036,694",
       "amount_num": 1036694,
       "level_1": "Community",
@@ -343,8 +343,8 @@
       "level_3": ""
     },
     {
-      "id": "Government / Chief Administrative Officer / 311 City-Parish Communications Services",
-      "name": "311 City-Parish Communications Services",
+      "id": "Government / Chief Administrative Officer / 311 Communications",
+      "name": "311 Communications",
       "amount": "$210,306",
       "amount_num": 210306,
       "level_1": "Government",
@@ -955,8 +955,8 @@
       "level_3": ""
     },
     {
-      "id": "Utilities / LUS / Utility - General Accounts",
-      "name": "Utility - General Accounts",
+      "id": "Utilities / LUS / Administration",
+      "name": "Administration",
       "amount": "$59,476,372",
       "amount_num": 59476372,
       "level_1": "Utilities",
@@ -1100,11 +1100,45 @@
     }
   ],
   "descriptions": {
-    "Infrastructure / Public Works": {
-      "id": "",
-      "description": "This includes blah, blah and blah.",
-      "budget_link": "https://thecurrentla.com",
-      "info_link": "https://thecurrentla.com"
+    "Capital Improvements": {
+      "description": "Roads, drainage, buildings, other infrastructure",
+      "budget_link": "",
+      "info_link": ""
+    },
+    "Capital Improvements / City - Bonds": {
+      "description": "Funded with debt",
+      "budget_link": "",
+      "info_link": ""
+    },
+    "Capital Improvements / City - Cash": {
+      "description": "Paid with general fund revenue",
+      "budget_link": "",
+      "info_link": ""
+    },
+    "Capital Improvements / City - Cash / Normal Capital and Reserves": {
+      "description": "Accounted by department",
+      "budget_link": "",
+      "info_link": ""
+    },
+    "Capital Improvements / Parish - Cash": {
+      "description": "Paid with general fund revenue",
+      "budget_link": "",
+      "info_link": ""
+    },
+    "Community": {
+      "description": "Housing, Health, Social Services, Recreation, Culture",
+      "budget_link": "",
+      "info_link": ""
+    },
+    "Utilities / LUS / Power Production": {
+      "description": "Power purchases, transmission charges",
+      "budget_link": "https://thecurrentla.com/wp-content/uploads/lcg-proposed-2023-budget-by-dept-1.pdf#page=257",
+      "info_link": ""
+    },
+    "Utilities / LUS / Administration": {
+      "description": "ILOT, interest, depreciation",
+      "budget_link": "",
+      "info_link": ""
     }
   }
 }
