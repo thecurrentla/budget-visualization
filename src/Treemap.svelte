@@ -150,6 +150,28 @@
     return "teal";
   }
 
+  function getColorHex(d) {
+    const category = getCategory(d, 1);
+    switch (category) {
+      case "Utilities":
+        return "#f8de00";
+      case "Capital Improvements":
+        return "#4dbfdf";
+      case "Infrastructure":
+        return "#79a240";
+      case "Public Safety":
+        return "#f27558";
+      case "Government":
+        return "#838bc5";
+      case "Community":
+        return "#6bbaca";
+      default:
+      // console.log(`No color found for ${category}.`);
+    }
+
+    return "teal";
+  }
+
   function getCategory(d, depth) {
     while (d.depth > depth) d = d.parent;
     return d.data[0];
@@ -219,15 +241,9 @@
             {width}
             {height}
             class="rect-color"
+            fill={isRoot ? "white" : getColorHex(d)}
             opacity={d.depth == 1 || root.children.length == 1 ? 1 : opacityScale(d.value)}
           />
-          <!-- <rect
-            id={`rect-${i}-gradient-color`}
-            {width}
-            {height}
-            class="rect-gradient"
-            fill={`url(#circle-${getColor(d)})`}
-          /> -->
           <rect id={`rect-${i}-gradient-1`} {width} {height} class="rect-gradient" fill={`url(#white-large)`} />
           <rect id={`rect-${i}-gradient-2`} {width} {height} class="rect-gradient" fill={`url(#white-small)`} />
         {/if}
@@ -348,12 +364,10 @@
   }
 
   .rect-color {
-    fill: var(--theme-color-base);
     stroke: var(--theme-color-darkest);
     stroke-width: 1;
   }
   .node.root .rect-color {
-    /* fill: var(--theme-color-lightest, white); */
     stroke-width: 0;
   }
 
@@ -367,17 +381,11 @@
     align-items: flex-start;
     justify-content: flex-start;
 
-    /* background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.75), transparent);
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent),
-      radial-gradient(circle at 25% 0%, var(--theme-color-lighter), var(--theme-color-transparent)),
-      radial-gradient(ellipse at 80% 120%, var(--theme-color-base), var(--theme-color-transparent)); */
-
-    transition: background-size 250ms ease, background-color 250ms ease;
+    transition: background-color 250ms ease;
   }
   .wrapper:hover,
   .wrapper:focus {
     background-color: rgba(255, 255, 255, 0.4);
-    /* background-size: 125% 125%; */
   }
   .wrapper:hover .title-icon,
   .wrapper:focus .title-icon {
@@ -387,9 +395,6 @@
 
   .node.root .wrapper {
     height: auto;
-
-    background-color: white;
-    background-image: none;
   }
 
   .node.root:not(.depth-0) .wrapper:hover,
@@ -474,6 +479,7 @@
     margin-top: 0.75em;
   }
 
+  /* 
   .departments {
     font-size: 0.75em;
   }
@@ -485,7 +491,7 @@
   }
   .departments li {
     margin: 0.25em;
-  }
+  } */
 
   .node.root,
   .node.size-full {
