@@ -43,7 +43,7 @@
   // Define opacity scale for adjusting
   $: opacityScale = scaleLinear()
     .domain([Math.min(...rootChildrenValues), Math.max(...rootChildrenValues)])
-    .range([0.5, 0.9]);
+    .range([0.9, 0.3]);
 
   // $: renderedNodes = root.children
   //   .concat(root)
@@ -245,15 +245,15 @@
         transition:fade={{ duration: 500 }}
       >
         {#if d.depth > 0 && !isRoot}
+          <rect id={`rect-${i}-color`} {width} {height} class="rect-color" fill={isRoot ? "white" : getColorHex(d)} />
           <rect
-            id={`rect-${i}-color`}
+            id={`rect-${i}-gradient-1`}
             {width}
             {height}
-            class="rect-color"
-            fill={isRoot ? "white" : getColorHex(d)}
+            class="rect-gradient"
+            fill={`url(#white-large)`}
             opacity={d.depth == 1 || root.children.length == 1 ? 1 : opacityScale(d.value)}
           />
-          <rect id={`rect-${i}-gradient-1`} {width} {height} class="rect-gradient" fill={`url(#white-large)`} />
           <rect id={`rect-${i}-gradient-2`} {width} {height} class="rect-gradient" fill={`url(#white-small)`} />
         {/if}
         <foreignObject id={`rect-${i}-fg`} x={0} y={0} {width} {height}>
@@ -284,6 +284,7 @@
                 {#if d.parent && d.data.name}
                   <div><span class="amount">{d.data.amount ? d.data.amount : ""}</span></div>
                 {:else if isRoot && d.parent}
+                  <div class="amount">{formatDollars(d.value)}</div>
                   <div class="name">{d.data[0] ? d.data[0] : ""}</div>
                 {:else if d.parent}
                   <div class="amount">{formatDollars(d.value)}</div>

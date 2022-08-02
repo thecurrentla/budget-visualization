@@ -2,8 +2,8 @@
   import { LayerCake, Svg } from "layercake";
 
   import Treemap from "./Treemap.svelte";
-  import Tooltip from "./Tooltip.svelte";
-  import Breadcrumb from "./Breadcrumb.svelte";
+  // import Tooltip from "./Tooltip.svelte";
+  // import Breadcrumb from "./Breadcrumb.svelte";
 
   import data from "./data/2022-data.json";
 
@@ -48,7 +48,7 @@
   const dataTree = grouped;
 </script>
 
-<LayerCake data={dataTree} padding={{ top: breadcrumbHeight, right: 0, bottom: 0, left: 0 }}>
+<LayerCake data={dataTree} padding={{ top: breadcrumbHeight, right: 0, bottom: 0, left: 0 }} ssr={true}>
   <!-- <Breadcrumb {breadcrumb} /> -->
   <Svg>
     <svelte:fragment slot="defs">
@@ -58,9 +58,9 @@
         <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
       </linearGradient>
       <linearGradient id="white-large" gradientTransform="rotate(30)">
-        <stop offset="0%" stop-color="rgba(255, 255, 255, 0.33)" />
-        <stop offset="66%" stop-color="rgba(255, 255, 255, 0.15)" />
-        <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
+        <stop offset="0%" stop-color="rgba(255, 255, 255, 0.45)" />
+        <stop offset="66%" stop-color="rgba(255, 255, 255, 0.3)" />
+        <stop offset="100%" stop-color="rgba(255, 255, 255, 0.15)" />
       </linearGradient>
       <g id="icon-arrow-up-left-circle">
         <path
