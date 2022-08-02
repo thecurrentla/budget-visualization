@@ -431,6 +431,7 @@
     align-items: baseline;
 
     gap: 0.125em 0.5em;
+    gap: 0.125em clamp(0.33em, 0.3em + 0.25vw, 0.5em);
     font-size: var(--title-font-size);
   }
 
@@ -449,9 +450,11 @@
   }
   .title-icon:first-child {
     margin-right: 0.5em;
+    margin-right: clamp(0.25em, 0.2em + 0.25vw, 0.5em);
   }
   .title-icon:last-child {
     margin-left: 0.5em;
+    margin-left: clamp(0.25em, 0.2em + 0.25vw, 0.5em);
   }
 
   .node.root .wrapper {
@@ -463,6 +466,7 @@
 
   .name {
     font-weight: 700;
+    font-weight: 750;
   }
   .amount {
     font-weight: 900;
@@ -471,9 +475,9 @@
   .content {
     font-weight: 600;
   }
-
   .content > * + * {
     margin-top: 0.75em;
+    margin-top: clamp(0.5em, 0.4em + 0.25vw, 0.75em);
   }
 
   /* 
