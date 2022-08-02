@@ -46,7 +46,8 @@ body {
   margin: 0 1rem;
   margin: 0 clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
 
-  font-size: 1.3rem;
+  font-size: 1.3em;
+  font-size: clamp(1.3em, 1em + 1vw, 2.75em);
 
   font-weight: 900;
 }
