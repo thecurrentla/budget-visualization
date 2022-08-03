@@ -4,15 +4,15 @@ import fetch from "node-fetch";
 import { parse } from "@fast-csv/parse";
 
 const CWD = process.cwd();
-const CONFIG_PATH = `${CWD}/config.json`;
+const CONFIG_PATH = `${CWD}/sheets.json`;
 const CONFIG = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf-8"));
-const { sheet } = CONFIG.google;
+const { sheets } = CONFIG.google;
 
-async function getAndWriteSheet(opt) {
+async function getAndWriteSheet(sheet) {
   const base = "https://docs.google.com/spreadsheets/d/e";
-  const url = `${base}/${opt.id}/pub?gid=${opt.gid}&single=true&output=csv`;
+  const url = `${base}/${sheet.id}/pub?gid=${sheet.gid}&single=true&output=csv`;
 
-  const file_csv = `${CWD}/${opt.filepath || "src/data/data.csv"}`;
+  const file_csv = `${CWD}/${sheet.filepath || "src/data/data.csv"}`;
   const file_json = file_csv.replace(".csv", ".json");
 
   try {
@@ -25,11 +25,11 @@ async function getAndWriteSheet(opt) {
         console.log(
           "csv with id",
           "\x1b[32m",
-          `${opt.id}`,
+          `${sheet.id}`,
           "\x1b[0m",
           "and gid",
           "\x1b[32m",
-          `${opt.gid}`,
+          `${sheet.gid}`,
           "\x1b[0m",
           "successfully written to",
           "\x1b[34m",
@@ -40,7 +40,21 @@ async function getAndWriteSheet(opt) {
       // const data_json = [];
       const data_json = {};
       const file_json_write = await parse({ headers: true })
-        .validate((data) => data.id !== "")
+        .validate((data) => {
+          let dataIsValid = true;
+          // let validation = {};
+
+          // console.log(data["id"]);
+          sheet.required.forEach((key) => {
+            if (data[key] === "") {
+              dataIsValid = false;
+              // validation[key] = false;
+            }
+          });
+          // console.log(validation);
+
+          return dataIsValid;
+        })
         .on("error", (error) => console.error(error))
         .on("data", (row) => {
           // console.log(row);
@@ -54,11 +68,11 @@ async function getAndWriteSheet(opt) {
             console.log(
               "json with id",
               "\x1b[32m",
-              `${opt.id}`,
+              `${sheet.id}`,
               "\x1b[0m",
               "and gid",
               "\x1b[32m",
-              `${opt.gid}`,
+              `${sheet.gid}`,
               "\x1b[0m",
               "successfully written to",
               "\x1b[34m",
@@ -70,7 +84,7 @@ async function getAndWriteSheet(opt) {
       file_json_write.end();
 
       Promise.all([file_csv_write, file_json_write]).then(() => {
-        console.log("complete");
+        // console.log("complete");
       });
     }
   } catch (err) {
@@ -79,7 +93,7 @@ async function getAndWriteSheet(opt) {
 }
 
 function init() {
-  sheet.forEach((value) => getAndWriteSheet(value));
+  sheets.forEach((sheet) => getAndWriteSheet(sheet));
 }
 
 init();

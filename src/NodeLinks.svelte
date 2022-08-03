@@ -1,5 +1,5 @@
 <script>
-  export let metadata, budgetLink, infoLink, linkClass;
+  export let budgetLink, infoLink, linkClass;
 
   export let budgetLinkText = "Budget Details";
   export let infoLinkText = "More About This";

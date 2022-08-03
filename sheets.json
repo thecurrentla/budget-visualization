@@ -1,17 +1,25 @@
 {
 	"google": {
-		"sheet": [
+		"sheets": [
 			{
 				"id": "2PACX-1vSDYDoQaap9AEJt2q_6ja5RaRmkDW2UQB2oK6fKnYAlYHhny3Cue2nP5JPu60Wy2jas84cGXCDvRXAc",
 				"gid": "1202473004",
-				"filepath": "src/data/2022-data.csv"
+				"filepath": "src/data/2022-data.csv",
+				"required": [
+					"id",
+					"amount",
+					"amount_num"
+				]
 			},
 			{
 				"id": "2PACX-1vSDYDoQaap9AEJt2q_6ja5RaRmkDW2UQB2oK6fKnYAlYHhny3Cue2nP5JPu60Wy2jas84cGXCDvRXAc",
 				"gid": "77485879",
-				"filepath": "src/data/2022-descriptions.csv"
+				"filepath": "src/data/2022-descriptions.csv",
+				"required": [
+					"id",
+					"description"
+				]
 			}
-		],
-		"doc": []
+		]
 	}
 }
