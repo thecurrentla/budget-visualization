@@ -282,7 +282,8 @@
                   <div class="amount">{formatDollars(d.value)}</div>
                   <div class="name">{d.data[0] ? d.data[0] : ""}</div>
                 {:else}
-                  <div class="amount">{formatDollars(d.value)}</div>
+                  <!-- <div class="amount">{formatDollars(d.value)}</div> -->
+                  <div class="amount">$700m</div>
                   <div class="name">Total Budget</div>
                 {/if}
               </div>
