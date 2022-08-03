@@ -4,7 +4,7 @@
 
   import { treemap, hierarchy, treemapBinary, treemapSquarify, treemapSlice, treemapDice } from "d3-hierarchy";
   import { scaleLinear } from "d3-scale";
-  import { some, isEqual } from "lodash";
+  import { some, isEqual } from "lodash-es";
 
   import NodeLinks from "./NodeLinks.svelte";
 
