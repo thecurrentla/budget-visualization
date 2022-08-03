@@ -325,20 +325,6 @@
 </g>
 
 <style>
-  button {
-    appearance: none;
-    background: none;
-    border: none;
-
-    cursor: pointer;
-
-    text-align: left;
-
-    display: block;
-
-    color: black;
-  }
-
   .node {
     pointer-events: none;
     opacity: 0;
@@ -379,6 +365,19 @@
     justify-content: flex-start;
 
     transition: background-color 250ms ease;
+  }
+  button.wrapper {
+    appearance: none;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    display: block;
+
+    color: black;
   }
   .wrapper:hover,
   .wrapper:focus {
