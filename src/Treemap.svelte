@@ -287,7 +287,7 @@
                 {:else}
                   <!-- The starter item -->
                   <!-- <div class="amount">{formatDollars(d.value)}</div> -->
-                  <div class="amount">$700m</div>
+                  <div class="amount">$707m</div>
                   <div class="name">Total Budget</div>
                 {/if}
               </div>
