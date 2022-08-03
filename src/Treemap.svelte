@@ -18,7 +18,7 @@
   $: y = scaleLinear().domain([0, $height]).range([0, $height]);
 
   $: treeMapFn = treemap()
-    .tile(treemapSquarify.ratio(2, 1))
+    .tile(treemapSquarify.ratio(0.5))
     // .padding(1)
     // .paddingInner(5)
     // .paddingOuter(5)
