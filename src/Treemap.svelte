@@ -274,20 +274,25 @@
               {/if}
               <div class="title">
                 {#if d.parent && d.data.name}
+                  <!-- A bottom level item -->
                   <div><span class="amount">{d.data.amount ? d.data.amount : ""}</span></div>
                 {:else if isRoot && d.parent}
-                  <!-- <div class="amount">{formatDollars(d.value)}</div> -->
+                  <!-- The current top level item, except for the starter item -->
+                  <!-- <div class="amount">{formatDollars(d.value)}</div> There isn't enough room for this in a lot of screen sizes-->
                   <div class="name">{d.data[0] ? d.data[0] : ""}</div>
                 {:else if d.parent}
+                  <!-- Standard items -->
                   <div class="amount">{formatDollars(d.value)}</div>
                   <div class="name">{d.data[0] ? d.data[0] : ""}</div>
                 {:else}
+                  <!-- The starter item -->
                   <!-- <div class="amount">{formatDollars(d.value)}</div> -->
                   <div class="amount">$700m</div>
                   <div class="name">Total Budget</div>
                 {/if}
               </div>
               {#if isRoot && !isBottomLevel}
+                <!-- This would show the links in the title/"back" button bar -->
                 <!-- {#if metadata && (metadata.budget_link || metadata.info_link)}
                   <div>
                     <NodeLinks {metadata} budgetLink={metadata.budget_link} infoLink={metadata.info_link} />
@@ -305,16 +310,6 @@
                 {#if metadata && metadata.description}
                   <div class="description">{metadata.description}</div>
                 {/if}
-                <!-- {#if hasChildren(d)}
-                  <div class="departments">
-                    <p>Includes:</p>
-                    <ul>
-                      {#each d.children as child}
-                        <li>{child.data[0]}</li>
-                      {/each}
-                    </ul>
-                  </div>
-                {/if} -->
                 {#if metadata && (metadata.budget_link || metadata.info_link)}
                   <div>
                     <NodeLinks budgetLink={metadata.budget_link} infoLink={metadata.info_link} />
@@ -482,20 +477,6 @@
     margin-top: 0.75em;
     margin-top: clamp(0.5em, 0.4em + 0.25vw, 0.75em);
   }
-
-  /* 
-  .departments {
-    font-size: 0.75em;
-  }
-  .departments ul,
-  .departments li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .departments li {
-    margin: 0.25em;
-  } */
 
   .node.root,
   .node.size-full {
