@@ -17,13 +17,7 @@
   $: x = scaleLinear().domain([0, $width]).range([0, $width]);
   $: y = scaleLinear().domain([0, $height]).range([0, $height]);
 
-  $: treeMapFn = treemap()
-    .tile(treemapSquarify.ratio(0.5))
-    // .padding(1)
-    // .paddingInner(5)
-    // .paddingOuter(5)
-    .round(false)
-    .size([$width, $height]);
+  $: treeMapFn = treemap().tile(treemapSquarify.ratio(0.5)).round(false).size([$width, $height]);
   // $: console.log($data);
 
   // Sort the data by value
@@ -108,8 +102,6 @@
     }
 
     let id_return = id.reverse().join(separator);
-    console.log(id);
-    console.log(id_return);
     return id_return;
   }
 
