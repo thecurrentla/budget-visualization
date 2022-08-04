@@ -354,18 +354,6 @@
     stroke-width: 0;
   }
 
-  .wrapper {
-    width: 100%;
-    height: 100%;
-    padding: 0.5em;
-
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-    transition: background-color 250ms ease;
-  }
   button.wrapper {
     appearance: none;
     background: none;
@@ -378,6 +366,18 @@
     display: block;
 
     color: black;
+  }
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0.5em;
+
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    transition: background-color 250ms ease;
   }
   .wrapper:hover,
   .wrapper:focus {
