@@ -354,7 +354,8 @@
     stroke-width: 0;
   }
 
-  button.wrapper {
+  .wrapper {
+    /* for <button> reset */
     appearance: none;
     background: none;
     border: none;
