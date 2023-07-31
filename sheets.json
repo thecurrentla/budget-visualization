@@ -19,6 +19,25 @@
 					"id",
 					"description"
 				]
+			},
+			{
+				"id": "2PACX-1vRVyzfFkaENQKSf9PclZZrekELczImo9yIfX082CK_jNZcTvmNXNLoqaIdPWOjVFOCQ-Rywfqbt_lJL",
+				"gid": "1202473004",
+				"filepath": "src/data/2023-data.csv",
+				"required": [
+					"id",
+					"amount",
+					"amount_num"
+				]
+			},
+			{
+				"id": "2PACX-1vRVyzfFkaENQKSf9PclZZrekELczImo9yIfX082CK_jNZcTvmNXNLoqaIdPWOjVFOCQ-Rywfqbt_lJL",
+				"gid": "77485879",
+				"filepath": "src/data/2023-descriptions.csv",
+				"required": [
+					"id",
+					"description"
+				]
 			}
 		]
 	}
