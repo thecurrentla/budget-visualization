@@ -93,56 +93,63 @@
         <span class="visually-hidden">The Current</span>
       </div>
       <h1>2023 Budget Explorer</h1>
-      <details>
-        <summary>About</summary>
-        <div>
-          <h2 class="">About</h2>
-          <p class="has-large-font-size">
-            This visualization explores the first proposed 2023 Lafayette Consolidated Government budget. Check out
-            <a href="https://www.thecurrentla.com/budget-guide">The Current's full budget guide</a> for more
-            information.
-          </p>
+      <button class="button button-size-small button-style-outline" data-modal="about">About</button>
+      <dialog id="about" class="l-stack">
+        <h2>About</h2>
+        <p class="has-large-font-size">
+          This visualization explores the first proposed 2023 Lafayette Consolidated Government budget. Check out
+          <a href="https://www.thecurrentla.com/budget-guide">The Current's full budget guide</a> for more information.
+        </p>
 
-          <h3>Notes</h3>
+        <h3>Notes</h3>
 
-          <p>
+        <p>
             <strong>This visualization totals $TKTK million.</strong> Some items are duplicated to accurately reflect
             costs by category.
+        </p>
+
+        <hr />
+
+        <div class="sources">
+          <h2>Sources</h2>
+
+          <ul>
+            <li>
+              <a href="#" target="_blank">Budget Proposal</a>
+              (PDF)
+            </li>
+            <li>
+              <a
+                href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRVyzfFkaENQKSf9PclZZrekELczImo9yIfX082CK_jNZcTvmNXNLoqaIdPWOjVFOCQ-Rywfqbt_lJL/pubhtml"
+                target="_blank"
+                >Sorted/Categorized Data</a
+              >
+              (spreadsheet)
+            </li>
+          </ul>
+
+          <p>
+            <a href="https://github.com/thecurrentla/budget-visualization">
+              <small>View the source code for this visualization &raquo;</small>
+            </a>
           </p>
-
-          <hr />
-
-          <div class="sources">
-            <h2>Sources</h2>
-
-            <ul>
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  >Budget Proposal</a
-                >
-                (PDF)
-              </li>
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  >Sorted/Categorized Data</a
-                >
-                (spreadsheet)
-              </li>
-            </ul>
-
-            <p>
-              <a href="https://github.com/thecurrentla/budget-visualization">
-                <small>View the source code for this visualization &raquo;</small>
-              </a>
-            </p>
-          </div>
         </div>
-      </details>
+      </dialog>
     </header>
     <main id="budget-explorer" style="width: 100%; height: 100%; height: calc(100% - var(--lp-header-height))"></main>
+    <script>
+      const toggles = document.querySelectorAll("[data-modal]");
+
+      const toggleModal = (dialog) => (dialog.open ? dialog.close() : dialog.showModal());
+
+      if (toggles) {
+        toggles.forEach((toggle) => {
+          toggle.addEventListener("click", () => {
+            const modal = document.getElementById(toggle.dataset.modal);
+            toggleModal(modal);
+          });
+        });
+      }
+    </script>
   </body>
 </html>
