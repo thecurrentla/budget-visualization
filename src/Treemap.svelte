@@ -8,7 +8,7 @@
 
   import NodeLinks from "./NodeLinks.svelte";
 
-  import descriptions from "./data/2022-descriptions.json";
+  import descriptions from "./data/2023-descriptions.json";
 
   export let root, formatDollars, breadcrumbHeight;
 

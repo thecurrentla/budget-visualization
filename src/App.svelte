@@ -5,7 +5,7 @@
   // import Tooltip from "./Tooltip.svelte";
   // import Breadcrumb from "./Breadcrumb.svelte";
 
-  import data from "./data/2022-data.json";
+  import data from "./data/2023-data.json";
 
   import { group, InternMap } from "d3-array";
   import { format } from "d3-format";
